@@ -1,10 +1,11 @@
 import React from 'react';
+import {PricingTable} from "@clerk/nextjs";
 
 const Subscriptions = () => {
     return (
-        <div>
-            Subscriptions
-        </div>
+        <main>
+            <div className="flex items-center"><PricingTable/></div>
+        </main>
     );
 };
 
