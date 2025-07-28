@@ -9,9 +9,10 @@ interface CompanionCardProps {
     subject: string;
     duration: number;
     color: string;
+    uuid?: string;
 }
 
-const CompanionCard = ({id, name, topic, subject, duration, color}: CompanionCardProps) => {
+const CompanionCard = ({id, name, topic, subject, duration, color ,uuid}: CompanionCardProps) => {
     return (
         <article className="companion-card" style={{backgroundColor: color}}>
             <div className="flex justify-between items-center">
@@ -34,7 +35,7 @@ const CompanionCard = ({id, name, topic, subject, duration, color}: CompanionCar
                        height={13.5}/>
                 <p className="text-sm">{duration} minutes</p>
             </div>
-            <Link href={`/companions/${id}`} key={id}>
+            <Link href={`/companions/${uuid}`} key={uuid}>
                 <button className="btn-primary w-full justify-center">Launch Lesson</button>
             </Link>
         </article>
